@@ -36,7 +36,8 @@ client.connect(err => {
   app.get('/allWorks', (req, res) => {
     volunteerWorkCollection.find({})
     .toArray( (err, documents) => {
-        res.send(documents)
+      console.log(documents)  
+      res.send(documents)
     })
   });
 
